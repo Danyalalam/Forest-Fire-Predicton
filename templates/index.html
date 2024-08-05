@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Forest Fire Prediction</title>
+</head>
+<body>
+    <h1>Forest Fire Prediction</h1>
+    <form action="{{ url_for('predict') }}" method="POST">
+        <label for="temperature">Temperature:</label>
+        <input type="text" id="temperature" name="temperature"><br><br>
+
+        <label for="RH">Relative Humidity:</label>
+        <input type="text" id="RH" name="RH"><br><br>
+
+        <label for="Ws">Wind Speed:</label>
+        <input type="text" id="Ws" name="Ws"><br><br>
+
+        <label for="Rain">Rain:</label>
+        <input type="text" id="Rain" name="Rain"><br><br>
+
+        <label for="FFMC">Fine Fuel Moisture Code:</label>
+        <input type="text" id="FFMC" name="FFMC"><br><br>
+
+        <label for="DMC">Duff Moisture Code:</label>
+        <input type="text" id="DMC" name="DMC"><br><br>
+
+        <label for="ISI">Initial Spread Index:</label>
+        <input type="text" id="ISI" name="ISI"><br><br>
+
+        <label for="classes">Classes:</label>
+        <input type="text" id="classes" name="classes"><br><br>
+
+        <label for="region">Region:</label>
+        <input type="text" id="region" name="region"><br><br>
+
+        <button type="submit">Predict</button>
+    </form>
+</body>
+</html>
